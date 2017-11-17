@@ -1,0 +1,60 @@
+<style>
+
+    p {
+        font-size: 14px;
+    
+    }
+
+  
+</style>
+
+<div class="container gallery-container">
+    <h1>Found Items</h1>
+
+    <div class="tz-gallery">
+        <div class="row">
+            <ul class="registered-users-list clearfix">
+                <li class="thumbnail" data-ng-repeat="item in listCtrl.items" style="margin:auto; text-align:center">
+                    <a class="lightbox" href="../images/park.jpg">
+                        <img src="https://cnet2.cbsistatic.com/img/SVArV0NpzrZzcyVYNgybsAB_5e8=/770x433/2017/09/12/61096602-8e41-41d5-a63d-0ed945435e49/iphonexfl.jpg">
+                    </a>
+
+                    <div class="caption">
+                        <h3>{{item.item}}</h3>
+                        <p>{{item.description}}</p>
+                    </div>
+
+                    <a href="#0" button type="button" ng-click="listCtrl.viewBtnClicked()" class="btn btn-primary">View Item</a>
+                </li>
+           </ul>
+   
+            </div>
+                </div>
+            </div>
+     
+
+<div id="myModal" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="thumbnail">
+                    <a class="lightbox">
+                        <img src="https://cnet2.cbsistatic.com/img/SVArV0NpzrZzcyVYNgybsAB_5e8=/770x433/2017/09/12/61096602-8e41-41d5-a63d-0ed945435e49/iphonexfl.jpg">
+                    </a>
+                    <p></p>
+                    <h2>{{item.item}}</h2>
+                    <p>Name: {{item.name}}</p>
+                    <p>Email: {{item.email}}</p>
+                    <p>PhoneNo: {{item.phoneNo}}</p>
+                    <p>Location: {{item.location}}</p>
+                    <p>Description: {{item.description}}</p>
+                   
+                </div>
+            <div class="modal-footer">
+                <form>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
