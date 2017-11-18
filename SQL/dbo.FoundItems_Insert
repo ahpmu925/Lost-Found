@@ -1,0 +1,69 @@
+ALTER proc [dbo].[FoundItems_Insert]
+          @Item nvarchar(50)
+		, @Name nvarchar(50)
+		, @Email nvarchar(128)
+		, @PhoneNo nvarchar(50)
+		, @Location nvarchar(150)
+		, @Description nvarchar(128)
+		, @Id int OUTPUT
+		, @UserId int
+
+				/*
+Declare @Id int = 0
+
+Declare @Item nvarchar(50) = 'Iphone'
+	, @Name nvarchar(50) = 'John'
+	, @Email nvarchar(128) = 'abc999@mailinator.com'
+	, @PhoneNo nvarchar(50) = '123-456-789'
+	, @Location nvarchar(150) = 'Bourns Hall'
+	, @Description nvarchar(128) = 'Found iphone'
+	, @UserId  int = 3
+		
+		
+
+Execute dbo.FoundItems_Insert
+		@Item
+	, @Name 
+	, @Email 
+	, @PhoneNo 
+	, @Location 
+	, @Description 
+	, @Id OUTPUT
+	, @UserId 
+		
+
+		
+
+
+SELECT *
+FROM dbo.FoundItems
+WHERE Id = @Id
+	*/
+
+as
+
+
+BEGIN
+
+		
+INSERT INTO [dbo].[FoundItems]
+           ([Item]
+           ,[Name]
+           ,[Email]
+           ,[PhoneNo]
+           ,[Location]
+		   ,[Description]
+           ,[UserId]
+		   )
+     VALUES
+           (@Item
+           ,@Name
+           ,@Email
+           ,@PhoneNo
+           ,@Location
+		   ,@Description
+           ,@UserId)
+
+		   SET @Id = SCOPE_IDENTITY();
+END
+
