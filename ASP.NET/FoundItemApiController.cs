@@ -15,7 +15,7 @@ using System.Threading.Tasks;
 using System.Web.Http;
 
 
-namespace GSwap.Web.Controllers
+namespace LostandFound.Controllers.Api
 {
     [RoutePrefix("api/founditems")]
     public class FoundItemApiController : ApiController
