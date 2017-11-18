@@ -1,0 +1,23 @@
+ALTER proc [dbo].[FoundItems_SelectAll]
+
+/*
+
+Execute dbo.FoundItems_SelectAll
+
+	*/
+
+	as
+
+	BEGIN
+
+SELECT [Id]
+      ,[Item]
+      ,[Name]
+      ,[Email]
+      ,[PhoneNo]
+      ,[Location]
+      ,[Description]
+      ,[UserId]
+  FROM [dbo].[FoundItems]
+
+  END
